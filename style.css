@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 10;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    align-items: center; /* Vertically center the container */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    perspective: 1000px; /* Adds depth to the 3D effect */
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Vertically center items inside container */
+    width: 100dvw;
+    max-width: 300px;
+    padding: 40px;
+    border: 1px solid #dedede; /* Black border */
+    border-radius: 25px;
+    background: #fcfbfb;
+    box-shadow: 3px 3px 0px #cacaca;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect to make the whole container move in 3D space */
+.container:hover {
+    transform: rotateY(10deg) rotateX(5deg); /* Creates a subtle 3D rotation effect */
+}
+
+.share-button {
+    font-size: 10px;
+    padding: 3px;
+    border: 2px solid #dfdbdb;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+    margin-bottom: 10px; /* Adjust distance between share button and image */
+    font-style: initial;
+    color: #494646;
+    transition: all 0.2s ease-in-out;
+}
+
+.share-button a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Create a typing effect */
+.reading-animation {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #777;
+    font-size: 9px;
+    border-right: 3px solid rgb(151, 151, 151); /* Cursor effect */
+    width: 0;
+    animation: typing 2.5s steps(40) 1s forwards, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+.share-button:hover {
+    background-color: #e7e7e7;
+    transform: translateY(-5px); /* Adds a slight lift effect on hover */
+}
+
+/* Image container */
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease;
+}
+
+/* Profile Image */
+.profile-img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 0px #cacaca;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Profile Image hover effect for 3D rotation */
+.profile-img:hover {
+    transform: rotate(15deg) scale(1.05); /* Slight rotation and scaling for effect */
+}
+
+/* Center name below image */
+h1 {
+    font-size: 17px;
+    font-weight: 50;
+    margin-top: 5px;
+    color: #858585;
+}
+
+/* Link card design */
+.link-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px 15px;
+    border: 2px solid #eee8e8;
+    text-decoration: none;
+    margin-bottom: 16px;
+    color: #858585;
+    border-radius: 25px;
+    box-shadow: 3px 3px 0px #a5a3a3;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Add a subtle 3D scale effect on hover */
+.link-card:hover {
+    background-color: #e7e7e7;
+    transform: scale(1.05) rotateY(5deg); /* Slight scaling and 3D rotation */
+}
+
+/* Caption Style */
+.caption {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Link Icons */
+.link-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linktree</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="img-container">
+      <h1>IT QUEEN</h1>
+      <br>
+      <div id="readMoreContent" class="reading-animation">
+        calm English start here
+      </div>
+    </div>
+
+    <!-- Voice Description -->
+    <div class="link-card">
+      <i class="fa-solid fa-volume-high"></i>
+      <p>Listen to me</p>
+      <button class="audio-control" id="playPauseBtn">Play</button>
+      <audio id="audio1">
+        <source src="WhatsApp Audio 2025-07-07 at 21.24.16.mpeg" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Social Links -->
+  <!-- Telegram -->
+<a href="https://t.me/+lOA-b1UqG-k1NTg8" class="link-card" target="_blank">
+  <i class="fab fa-telegram"></i>
+  <p>Telegram</p>
+  <i class="fa-solid fa-arrow-up-from-bracket"></i>
+</a>
+
+<!-- Snapchat -->
+<a href="https://snapchat.com/t/CXddMQFq" class="link-card" target="_blank">
+  <i class="fab fa-snapchat-ghost"></i>
+  <p>Snapchat</p>
+  <i class="fa-solid fa-arrow-up-from-bracket"></i>
+</a>
+
+
+  </div>
+
+  <script>
+    const audio = document.getElementById('audio1');
+    const btn = document.getElementById('playPauseBtn');
+
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = 'Pause';
+      } else {
+        audio.pause();
+        btn.textContent = 'Play';
+      }
+    });
+  </script>
+
+</body>
+</html>
+[]
